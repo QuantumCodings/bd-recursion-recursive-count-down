@@ -8,8 +8,15 @@ public class RecursiveCountDown {
      * @param target - this is the number we are counting down from
      * @return - this is a String that has combined all the numbers from target down to 0.
      */
-    public String countDown(int target) {
-        //PARTICIPANTS: replace this placeholder line with your implementation
-        return Integer.toString(-1);
+    public static String countdown(int n) {
+        if (n == 0) {
+            return "0";
+        }
+        return n + countdown(n - 1);
+    }
+
+    public static void main(String[] args) {
+        int n = 3;
+        System.out.println(countdown(n)); // Output will be "3210"
     }
 }
